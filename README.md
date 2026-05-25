@@ -1,24 +1,84 @@
-# Apple-Rootstock-Classification
-Apple-Rootstock-Classification using Machine Learning, CNN and Transfer Learning
-📌 Project Overview
+# 🍎 Apple Rootstock Classification
 
-This project focuses on the classification of apple rootstock images using different Machine Learning and Deep Learning techniques. The system compares traditional machine learning algorithms with deep learning approaches to identify the best-performing model for apple rootstock classification.
+An advanced Machine Learning and Deep Learning project for Apple Rootstock Classification using traditional ML algorithms, CNN, and Transfer Learning (MobileNetV2).
 
-The project includes:
+---
 
-Image preprocessing
-Data augmentation
-Feature extraction
-Machine Learning models
-CNN model
-Transfer Learning using MobileNetV2
-Performance comparison
-🎯 Objectives
-To classify apple rootstock images accurately.
-To compare traditional machine learning models with deep learning models.
-To improve classification performance using transfer learning.
-To develop a foundation for a real-time mobile/web application.
-🛠️ Technologies Used
+# 📌 Project Overview
+
+This project focuses on automatic classification of apple rootstock images using image processing, machine learning, and deep learning techniques.
+
+The system compares multiple models including:
+
+- Support Vector Machine (SVM)
+- Random Forest
+- Convolutional Neural Network (CNN)
+- MobileNetV2 Transfer Learning
+
+The best-performing model is selected based on classification accuracy and validation performance.
+
+---
+
+# 🚀 Features
+
+✅ Image preprocessing  
+✅ Data augmentation  
+✅ Feature extraction using GLCM and LBP  
+✅ Machine Learning classification  
+✅ CNN implementation  
+✅ Transfer Learning with MobileNetV2  
+✅ Accuracy and loss visualization  
+✅ Performance comparison graph  
+✅ CSV result generation  
+✅ Ready for deployment in mobile/web applications
+
+---
+
+# 🧠 Models Used
+
+| Model | Type |
+|------|------|
+| SVM | Machine Learning |
+| Random Forest | Machine Learning |
+| CNN | Deep Learning |
+| MobileNetV2 | Transfer Learning |
+
+---
+
+# 📊 Final Results
+
+| Model | Accuracy |
+|------|------|
+| SVM | ~22% |
+| Random Forest | ~35% |
+| CNN | ~86% |
+| MobileNetV2 | ~88.54% |
+
+🏆 MobileNetV2 achieved the highest accuracy.
+
+---
+
+# 📂 Project Structure
+
+Apple-Rootstock-Classification/
+│
+├── Rootstock.ipynb
+├── final_results.csv
+├── cnn_rootstock_model.h5
+├── README.md
+│
+├── dataset/
+│   ├── train/
+│   ├── validation/
+│   └── test/
+│
+└── outputs/
+    ├── accuracy_graph.png
+    ├── loss_graph.png
+    └── comparison_chart.png
+    
+ ⚙️ ##############        Technologies Used
+ 
 Python
 Google Colab
 OpenCV
@@ -28,105 +88,128 @@ Matplotlib
 Scikit-learn
 TensorFlow
 Keras
-📂 Dataset
 
-The dataset contains apple rootstock images divided into multiple classes.
-
-Dataset structure:
-
-dataset/
- ├── train/
- ├── test/
- └── validation/
 🔄 Project Workflow
-1. Data Collection
 
-Apple rootstock images were collected and organized into different classes.
+1️⃣ Data Collection
+Apple rootstock images were collected and organized into different categories.
 
-2. Image Preprocessing
-
+2️⃣ Image Preprocessing
 The following preprocessing techniques were applied:
-
 Image resizing
 Normalization
 CLAHE enhancement
 Noise removal
-3. Data Augmentation
 
-To increase dataset diversity:
-
+3️⃣ Data Augmentation
+To improve model generalization:
 Rotation
 Flipping
 Zooming
 Shearing
-4. Feature Extraction
 
-Handcrafted features extracted include:
-
+4️⃣ Feature Extraction
+Extracted handcrafted features include:
+🔹 GLCM Features
 Contrast
 Correlation
 Energy
 Homogeneity
+🔹 LBP Features
 LBP Mean
 LBP Standard Deviation
-5. Machine Learning Models
 
-The following models were implemented:
+5️⃣ Machine Learning Models
+🔹 Support Vector Machine (SVM)
+Used for traditional classification based on handcrafted features.
+🔹 Random Forest
+Used for ensemble-based classification.
 
-Support Vector Machine (SVM)
-Random Forest
-6. Deep Learning Models
-
-Implemented models:
-
-Convolutional Neural Network (CNN)
-MobileNetV2 Transfer Learning
-🧠 CNN Architecture
-
-The CNN model contains:
-
+6️⃣ Deep Learning Models
+🔹 CNN Model
+Custom CNN architecture containing:
 Convolution layers
 MaxPooling layers
 Dropout layers
 Dense layers
 Softmax output layer
+🔹 Transfer Learning
+MobileNetV2 pretrained architecture was used for improved feature learning and higher accuracy.
 
-🚀 Transfer Learning
-MobileNetV2 pretrained architecture was used for transfer learning to improve classification accuracy and reduce training time.
+📈 Performance Visualization
+The project generates:
+Training accuracy graph
+Validation accuracy graph
+Loss graph
+Model comparison chart
 
-| Model         | Accuracy |
-| ------------- | -------- |
-| SVM           | ~22%     |
-| Random Forest | ~35%     |
-| CNN           | ~86%     |
-| MobileNetV2   | ~88%     |
+💡 Future Scope
+Future improvements may include:
+Real-time mobile application
+Web deployment using Flask/Streamlit
+Live camera prediction
+Cloud deployment
+Larger dataset training
+Real-time farmer assistance system
 
-📈 Performance Comparison
+📱 Proposed Application
+The final goal is to create a mobile application where users can:
+Capture an apple rootstock image
+Upload the image
+Get instant classification results
 
-The project includes graphical comparison of:
+This can help:
+Farmers
+Researchers
+Agricultural industries
 
-Accuracy
-Loss
-Validation accuracy
-Model comparison charts
-
-▶️ How to Run
-Clone Repository
+▶️ Installation Guide
+Step 1: Clone Repository
 git clone https://github.com/MayasarAhmad/Apple-Rootstock-Classification.git
-Install Dependencies
-pip install -r requirements.txt
-Run Notebook
+Step 2: Open Project Folder
+cd Apple-Rootstock-Classification
+Step 3: Install Required Libraries
+pip install tensorflow
+pip install keras
+pip install opencv-python
+pip install scikit-learn
+pip install matplotlib
+pip install pandas
+pip install numpy
+Or install all together:
+pip install tensorflow keras opencv-python scikit-learn matplotlib pandas numpy
 
-Open:
+▶️ Running the Project
+Open Jupyter Notebook----jupyter notebook
+open----Rootstock.ipynb
 
-Rootstock.ipynb
+▶️ Running in Google Colab
+Upload the notebook to Google Colab
+Upload dataset folders
+The trained models are saved using:
+model.save("cnn_rootstock_model.h5")
 
-in Google Colab or Jupyter Notebook.
+📊 Output Files
+Generated outputs include:
+Trained model files
+Accuracy graphs
+Comparison charts
+CSV results
+Run all cells sequentially
 
-📌 Author
+🔥 Key Achievements
+✅ Successfully implemented ML and DL models
+✅ Achieved high classification accuracy
+✅ Compared traditional and deep learning approaches
+✅ Implemented transfer learning
+✅ Generated visual performance analysis
 
-Mayasar Ahmad
-Postgraduate in Artificial Intelligence
 ⭐ Conclusion
+This project demonstrates the effectiveness of Deep Learning and Transfer Learning techniques for apple rootstock classification.
+Among all implemented models, MobileNetV2 achieved the highest performance and proved more effective compared to traditional machine learning methods.
+The project can be extended into a real-world agricultural assistance application for farmers and researchers.
 
-This project successfully demonstrates the effectiveness of deep learning and transfer learning techniques for apple rootstock classification. MobileNetV2 achieved the highest accuracy and proved more efficient compared to traditional machine learning models.
+👨‍💻 Author
+---------------------------------------------------Mayasar Ahmad Ganie-------------------------------------------------------
+
+https://github.com/MayasarAhmad/Apple-Rootstock-Classification
